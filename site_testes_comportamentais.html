@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste Comportamental - Anastácio Engenharia</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="max-w-4xl mx-auto p-6 bg-white shadow mt-10">
+    <h1 class="text-2xl font-bold mb-4">Formulário de Identificação</h1>
+    <form id="formulario">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input class="border p-2" type="text" name="nome" placeholder="Nome completo" required>
+        <input class="border p-2" type="email" name="email" placeholder="E-mail" required>
+        <input class="border p-2" type="tel" name="telefone" placeholder="Telefone" required>
+        <input class="border p-2" type="date" name="dataEntrevista" required>
+        <select class="border p-2 col-span-1 md:col-span-2" name="cargo" required>
+          <option value="">Área/Cargo pretendido</option>
+          <option value="Operacional">Operacional</option>
+          <option value="Administrativo">Administrativo</option>
+          <option value="Comercial">Comercial</option>
+          <option value="Engenharia">Engenharia</option>
+        </select>
+      </div>
+
+      <h2 class="text-xl font-semibold mt-6">DISC - Escolha uma opção por linha</h2>
+      <div class="space-y-4 mt-2">
+        <div>
+          <label>Eu sou mais:</label><br>
+          <input type="radio" name="disc1" value="D"> Direto
+          <input type="radio" name="disc1" value="I"> Entusiasmado
+          <input type="radio" name="disc1" value="S"> Paciente
+          <input type="radio" name="disc1" value="C"> Analítico
+        </div>
+        <div>
+          <label>Em um grupo, costumo:</label><br>
+          <input type="radio" name="disc2" value="D"> Liderar
+          <input type="radio" name="disc2" value="I"> Animar
+          <input type="radio" name="disc2" value="S"> Colaborar
+          <input type="radio" name="disc2" value="C"> Seguir regras
+        </div>
+        <div>
+          <label>Quando enfrento um problema:</label><br>
+          <input type="radio" name="disc3" value="D"> Resolver
+          <input type="radio" name="disc3" value="I"> Compartilhar
+          <input type="radio" name="disc3" value="S"> Observar
+          <input type="radio" name="disc3" value="C"> Analisar
+        </div>
+        <div>
+          <label>Prefiro trabalhar com:</label><br>
+          <input type="radio" name="disc4" value="D"> Metas
+          <input type="radio" name="disc4" value="I"> Pessoas
+          <input type="radio" name="disc4" value="S"> Rotina
+          <input type="radio" name="disc4" value="C"> Regras
+        </div>
+        <div>
+          <label>Em um conflito:</label><br>
+          <input type="radio" name="disc5" value="D"> Confronto
+          <input type="radio" name="disc5" value="I"> Conversa
+          <input type="radio" name="disc5" value="S"> Evito
+          <input type="radio" name="disc5" value="C"> Sigo normas
+        </div>
+      </div>
+
+      <h2 class="text-xl font-semibold mt-6">Big Five - De 1 (Discordo Totalmente) a 5 (Concordo Totalmente)</h2>
+      <div class="space-y-4 mt-2">
+        <label>Abertura à experiência: Gosto de aprender coisas novas e explorar ideias diferentes. <input type="number" name="big1" min="1" max="5" class="border ml-2 w-16"></label><br>
+        <label>Conscienciosidade: Sou organizado(a) e sempre cumpro prazos. <input type="number" name="big2" min="1" max="5" class="border ml-2 w-16"></label><br>
+        <label>Extroversão: Me sinto energizado(a) ao estar com outras pessoas. <input type="number" name="big3" min="1" max="5" class="border ml-2 w-16"></label><br>
+        <label>Amabilidade: Procuro ser gentil e cooperativo(a) com todos. <input type="number" name="big4" min="1" max="5" class="border ml-2 w-16"></label><br>
+        <label>Neuroticismo: Costumo ficar ansioso(a), estressado(a) ou preocupado(a). <input type="number" name="big5" min="1" max="5" class="border ml-2 w-16"></label><br>
+      </div>
+
+      <h2 class="text-xl font-semibold mt-6">Fit Cultural e Situações Comportamentais</h2>
+      <textarea name="fit1" rows="4" class="w-full border p-2 mt-2" placeholder="Você acredita que precisão é mais importante que velocidade? Justifique."></textarea>
+      <textarea name="fit2" rows="4" class="w-full border p-2 mt-2" placeholder="Prefere ser transparente mesmo que cause desconforto? Por quê?"></textarea>
+      <textarea name="fit3" rows="4" class="w-full border p-2 mt-2" placeholder="Lealdade é um valor que você pratica? Explique."></textarea>
+      <textarea name="fit4" rows="4" class="w-full border p-2 mt-2" placeholder="Você cumpre normas mesmo sem supervisão?"></textarea>
+      <textarea name="situacao1" rows="4" class="w-full border p-2 mt-2" placeholder="Você cometeu um erro. Seu gestor não viu. O que faz?"></textarea>
+      <textarea name="situacao2" rows="4" class="w-full border p-2 mt-2" placeholder="Você vê um colega cometendo erro. O que faz?"></textarea>
+      <textarea name="tarefas" rows="4" class="w-full border p-2 mt-2" placeholder="Como organizaria as tarefas: separar EPI até 13h, enviar documentos urgentes, conferir presença em treinamento?"></textarea>
+
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded mt-4">Enviar Avaliação</button>
+    </form>
+  </div>
+</body>
+</html>
